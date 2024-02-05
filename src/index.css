@@ -246,4 +246,9 @@ a {
         align-items: center;
         flex-direction: column;
     }
+
+    .recipe {
+        width: 100%;
+        margin: 0;
+    }
 }

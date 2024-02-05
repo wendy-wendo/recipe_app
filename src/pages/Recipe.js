@@ -34,7 +34,7 @@ const Recipe = ({ recipes }) => {
           }
         </ul>
 
-        <a href={recipe.recipe.url} target='blank'><button>SEE INSTRUCTIONS</button></a>
+        <a href={recipe.recipe.url} target='_blank' rel="noreferrer"><button>SEE INSTRUCTIONS</button></a>
     </div>
   )
 }
