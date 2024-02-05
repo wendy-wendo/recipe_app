@@ -3,7 +3,7 @@ import Image from "../components/Image";
 import {FaSearch} from "react-icons/fa"
 import { Link } from 'react-router-dom';
 
-const Main = ({ recipes, search, setSearch, loading, fetchError }) => {
+const Main = ({ recipes, search, setSearch, loading, fetchError, getRecipes }) => {
 
   return (
     <main>
@@ -11,15 +11,18 @@ const Main = ({ recipes, search, setSearch, loading, fetchError }) => {
           <h2>Explore Recipes</h2>
           <hr />
 
-          <div className="search-bar">
-              <FaSearch/>
+          <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
               <input 
               type="text" 
               placeholder="Search Recipes"
               onChange={(e) => setSearch(e.target.value)} 
               value={search}
               />
-          </div>
+
+              <button type='submit' onClick={getRecipes}>
+                <FaSearch />
+              </button>
+          </form>
 
           {fetchError && !loading && <p className='status'>No connection available.</p>}
 

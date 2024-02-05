@@ -110,7 +110,12 @@ input {
 .search-bar svg {
     width: 20px;
     height: 45px;
-    margin-right: 5px;
+}
+
+.search-bar button {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
 }
 
 .status {
